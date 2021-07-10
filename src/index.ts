@@ -1,4 +1,5 @@
 const convert = (text: string, delimeter = '\r\n') => {
+    /*eslint prefer-const: 0*/
     let data: any = {};
     const splitText = text.split(delimeter);
     splitText.map((t) => {
