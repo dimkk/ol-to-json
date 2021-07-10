@@ -44,3 +44,27 @@ describe('integration, test whole convert process', () => {
         expect(result['1']['3'].text).toContain('re unnecessary clicking per sear');
     });
 });
+
+describe('simple test from readme', () => {
+    const testString = 'this is test header \r\n 1. line 1 \r\n 1.1. line 11 \r\n line 11 next';
+    it('should have property header', async () => {
+        let result = ol2json(testString, '\r\n');
+        expect(result).toHaveProperty('header');
+    });
+    it('should have property 1', async () => {
+        let result = ol2json(testString, '\r\n');
+        expect(result).toHaveProperty('1');
+    });
+    it('should have property 1.1', async () => {
+        let result = ol2json(testString, '\r\n');
+        expect(result['1']).toHaveProperty('1');
+    });
+    it('should have "this is test header" in substring of property header', async () => {
+        let result = ol2json(testString, '\r\n');
+        expect(result.header).toContain('this is test header');
+    });
+    it('should have "next" in substring of property 1.1', async () => {
+        let result = ol2json(testString, '\r\n');
+        expect(result['1']['1'].text).toContain('next');
+    });
+});

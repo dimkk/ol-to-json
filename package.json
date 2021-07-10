@@ -34,7 +34,7 @@
         "format": "prettier --write 'src/**/*'",
         "lint": "eslint --max-warnings=0 'src/**/*'",
         "prepare": "husky install",
-        "prepublishOnly": "yarn build",
+        "prepublishOnly": "npm run build",
         "test": "jest",
         "watch": "jest --watch"
     },
