@@ -44,5 +44,14 @@
             "prettier --check"
         ]
     },
-    "keywords": []
+    "keywords": [
+        "ol",
+        "json",
+        "ordered",
+        "list",
+        "convert",
+        "to json",
+        "2json",
+        "ol2json"
+    ]
 }
