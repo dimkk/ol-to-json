@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ol-to-json
+  annotations:
+    github.com/project-slug: dimkk/ol-to-json
+spec:
+  type: other
+  lifecycle: unknown
+  owner: acme-corp
